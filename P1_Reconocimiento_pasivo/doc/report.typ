@@ -68,6 +68,8 @@ Es decir. no sabe quienes somos nosotros, los que realmente hemos pedido la info
 
 Esto lo diferencia al reconocimiento activo, en este las consultas SÍ las hace nuestro dispositivo directamene hacia el objetivo. Esto le permite detectar, regsitrar e incluso bloquearnos.
 
+Por ejemplo al usar webs como #link("https://who.is/")[WHOIS] o #link("https://dnschecker.org/")[DNSchecker] son herramientas de recolección pasivas, mientras que erramientas como dig o nsloockup ya son herramientas activas.
+
 #pagebreak()
 
 = Auditoria OSINT
