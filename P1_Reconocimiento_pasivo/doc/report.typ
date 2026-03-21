@@ -215,7 +215,7 @@ Si entramos en la propia página web de Santander en el apartado de servicios fi
   [Estados Unidos], [santanderus.com],
 )
 
-Usando otra herramienta llamada Shodan, encontramos información muy valiosa. #cite(<shodan_santander>)
+Usando otra herramienta llamada Shodan, encontramos información muy valiosa.#cite(Shodan)
 
 Lo primero de todo encontramos un total de 2.680 dispositivos o servicios expuestos,
 distribuidos en numerosos países como:
