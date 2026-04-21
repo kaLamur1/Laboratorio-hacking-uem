@@ -1,0 +1,36 @@
+services: # Los contenedores que creamos
+  http:
+    image: nginx # Servidor web IP: 172.19.0.2
+    container_name: http-container
+    networks:
+      - mi-red
+
+  ssh:
+    image: linuxserver/openssh-server # IP: 172.19.0.4
+    container_name: ssh-container
+    environment:
+      - USER_NAME=ssh-user
+      - LISTEN_PORT=22
+      - PASWORD_ACCESS=true
+      - USER_PASWORD=123
+    ports:
+      - "2222:22"
+    networks:
+      - mi-red
+
+  ftp:
+    image: garethflowers/ftp-server # IP: 172.19.0.3
+    container_name: ftp-container
+    ports:
+      - "21:21"
+      - "20:20"
+      - "40000-40009:40000-40009"
+    environment:
+      - FTP_PASS=root
+      - FTP_USER=user
+    networks:
+      - mi-red
+
+networks: # Parte en la que configurams la red
+  mi-red: # nombre de la red que compartiran todos los dockers
+    driver: bridge # el tipo de red, esté es el defecto comunican con la red y el host
